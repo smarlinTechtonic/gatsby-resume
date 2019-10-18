@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
-        title: 'Wonderful Blog',
-        author: 'Aggie Agatha'
+        title: 'Lorem Ipsum',
+        author: 'Agatha Agnes Agate Amarillo-Amaranth'
     },
     plugins: [
         'gatsby-plugin-react-helmet',

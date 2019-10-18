@@ -9,7 +9,7 @@ export const query = graphql`
     query($slug: String) {
         contentfulBlogPost(slug: {eq: $slug}) {
             title
-            dateWritten(fromNow: true)
+            publishDate(fromNow: true)
             body {
                 json
             }
@@ -31,7 +31,7 @@ const Blog = (props) => {
         <Layout>
             <Head title={props.data.contentfulBlogPost.title} />
             <h1>{props.data.contentfulBlogPost.title}</h1>
-            <p>{props.data.contentfulBlogPost.dateWritten}</p>
+            <p>{props.data.contentfulBlogPost.publishDate}</p>
             {documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}
         </Layout>
     );
